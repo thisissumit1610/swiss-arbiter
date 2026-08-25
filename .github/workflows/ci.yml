@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Typecheck, test and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test the engine
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Check the offline bundle is complete
+        run: |
+          test -f packages/app/dist/index.html
+          test -f packages/app/dist/sw.js
+          test -f packages/app/dist/manifest.webmanifest
+          grep -q "swiss-arbiter-" packages/app/dist/sw.js
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app
+          path: packages/app/dist
+          retention-days: 7

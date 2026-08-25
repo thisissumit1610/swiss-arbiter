@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Swiss Arbiter">
+  <rect width="64" height="64" rx="14" fill="#112042"/>
+  <g>
+    <rect x="11" y="11" width="10.5" height="10.5" fill="#4f85e8"/>
+    <rect x="32" y="11" width="10.5" height="10.5" fill="#f0f3f8"/>
+    <rect x="21.5" y="21.5" width="10.5" height="10.5" fill="#f0f3f8"/>
+    <rect x="42.5" y="21.5" width="10.5" height="10.5" fill="#f0f3f8"/>
+    <rect x="11" y="32" width="10.5" height="10.5" fill="#f0f3f8"/>
+    <rect x="32" y="32" width="10.5" height="10.5" fill="#f0f3f8"/>
+    <rect x="21.5" y="42.5" width="10.5" height="10.5" fill="#f0f3f8"/>
+    <rect x="42.5" y="42.5" width="10.5" height="10.5" fill="#f0f3f8"/>
+  </g>
+</svg>

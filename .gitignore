@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.vite/
+coverage/
+*.local
+.env
+.env.*
+
+# editor/agent tooling
+.claude/
+.vscode/
+.idea/

@@ -1,0 +1,25 @@
+{
+  "name": "swiss-arbiter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-first Swiss-system chess tournament manager with a FIDE Dutch pairing engine",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/engine",
+    "packages/app"
+  ],
+  "scripts": {
+    "build": "npm run build -w @swiss-arbiter/engine && npm run build -w @swiss-arbiter/app",
+    "test": "npm run test -w @swiss-arbiter/engine",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run typecheck",
+    "dev": "npm run dev -w @swiss-arbiter/app"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
