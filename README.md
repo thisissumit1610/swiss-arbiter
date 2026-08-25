@@ -1,8 +1,14 @@
 # Swiss Arbiter
 
+[![CI](https://github.com/thisissumit1610/swiss-arbiter/actions/workflows/ci.yml/badge.svg)](https://github.com/thisissumit1610/swiss-arbiter/actions/workflows/ci.yml)
+[![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+
 An offline-first tournament manager for Swiss-system chess, with a from-scratch
 implementation of the FIDE Dutch pairing system and the current tie-break
 regulations.
+
+**→ [Open the app](https://thisissumit1610.github.io/swiss-arbiter/)** — install
+it from the browser and it works with the network switched off.
 
 Pairing a Swiss round is a constraint-satisfaction problem, not a sort. Two
 players must never meet twice, nobody may have the same colour three rounds
